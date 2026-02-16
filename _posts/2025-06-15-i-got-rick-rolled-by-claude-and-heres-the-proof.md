@@ -11,9 +11,12 @@ tags:
 permalink: /2025/06/i-got-rick-rolled-by-claude-and-heres_12.html
 ---
 
-video here
+<video controls playsinline poster="/assets/media/thumb.png" style="width:100%; max-width:720px; margin: 0 auto 2rem; display:block;">
+  <source src="/assets/media/rickRolled.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
----
+<!--more-->
 
 I was live-streaming on TikTok, building out a content automation tool with Claude, when it happened.
 

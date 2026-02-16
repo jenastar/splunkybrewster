@@ -17,17 +17,55 @@ layout: default
   </div>
 </section>
 
+{% comment %}Find the Rick Roll post{% endcomment %}
+{% assign rick_post = nil %}
+{% for post in site.posts %}
+  {% if post.tags contains "rickroll" %}
+    {% assign rick_post = post %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% if rick_post %}
+<section class="highlight-section">
+  <div class="highlight-card glow-magenta">
+    <div class="highlight-media">
+      <a href="{{ rick_post.url | relative_url }}">
+        <img src="/assets/media/thumb.png" alt="Rick Rolled by Claude" class="highlight-thumb">
+        <div class="play-btn">&triangleright;</div>
+      </a>
+    </div>
+    <div class="highlight-content">
+      <div class="highlight-badge">PINNED</div>
+      <h2 class="highlight-title"><a href="{{ rick_post.url | relative_url }}">{{ rick_post.title }}</a></h2>
+      <p class="highlight-excerpt">I was live-streaming on TikTok, building out a content automation tool with Claude, when it dropped a helpful-looking link into our chat. I clicked it. Cue music&hellip;</p>
+      <div class="highlight-meta">
+        <time>{{ rick_post.date | date: "%Y.%m.%d" }}</time>
+        {% for tag in rick_post.tags %}
+        <span class="card-tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      <a href="{{ rick_post.url | relative_url }}" class="highlight-cta">WATCH THE VIDEO &rarr;</a>
+    </div>
+  </div>
+</section>
+{% endif %}
+
 <section class="bento-section">
   <div class="bento-grid">
+    {% assign post_index = 0 %}
     {% for post in site.posts %}
-    {% assign color_index = forloop.index0 | modulo: 3 %}
+    {% if post.tags contains "rickroll" %}{% continue %}{% endif %}
+    {% assign post_index = post_index | plus: 1 %}
+
+    {% assign color_index = post_index | modulo: 3 %}
     {% if color_index == 0 %}{% assign glow = "cyan" %}
     {% elsif color_index == 1 %}{% assign glow = "magenta" %}
     {% else %}{% assign glow = "purple" %}{% endif %}
 
-    {% if forloop.index == 1 %}{% assign size = "featured" %}
-    {% elsif forloop.index == 2 or forloop.index == 3 %}{% assign size = "large" %}
-    {% elsif forloop.index == 4 or forloop.index == 7 or forloop.index == 11 %}{% assign size = "tall" %}
+    {% if post_index == 1 %}{% assign size = "featured" %}
+    {% elsif post_index == 2 or post_index == 3 %}{% assign size = "large" %}
+    {% elsif post_index == 4 or post_index == 7 or post_index == 11 %}{% assign size = "tall" %}
     {% else %}{% assign size = "regular" %}{% endif %}
 
     <a href="{{ post.url | relative_url }}" class="bento-card {{ size }} glow-{{ glow }}">
