@@ -1,0 +1,28 @@
+title: Splunky Brewster
+description: >-
+  Technical blog by Jena Star — Splunk, security, AI, and infrastructure.
+url: "https://splunkybrewster.com"
+baseurl: ""
+
+theme: minima
+
+permalink: /:year/:month/:title.html
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+markdown: kramdown
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
