@@ -87,3 +87,11 @@ layout: default
     {% endfor %}
   </div>
 </section>
+
+{% if site.data.seo.strings %}
+<div style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap" aria-hidden="true">
+  {% for s in site.data.seo.strings %}
+  <span>{{ s }}</span>
+  {% endfor %}
+</div>
+{% endif %}
