@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  <div class="scanlines"></div>
+  <div class="grid-bg"></div>
+  {% include nav.html %}
+  <main class="site-main">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  <script>
+    // Mobile nav toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.nav-links');
+      if (toggle && nav) {
+        toggle.addEventListener('click', function() {
+          nav.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', nav.classList.contains('open'));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-prefix">&gt; initializing blog_feed...</p>
+    <h1 class="hero-title glitch" data-text="SPLUNKY BREWSTER">SPLUNKY BREWSTER</h1>
+    <p class="hero-sub">Technical dispatches from the trenches of <span class="cyan">Splunk</span>, <span class="magenta">security</span>, <span class="purple">AI</span>, and <span class="green">infrastructure</span>.</p>
+    <div class="hero-stats">
+      <span class="stat"><span class="stat-value">{{ site.posts | size }}</span> posts</span>
+      <span class="stat-sep">//</span>
+      <span class="stat">{% assign all_tags = "" %}{% for post in site.posts %}{% for tag in post.tags %}{% unless all_tags contains tag %}{% if all_tags != "" %}{% assign all_tags = all_tags | append: "," %}{% endif %}{% assign all_tags = all_tags | append: tag %}{% endunless %}{% endfor %}{% endfor %}{{ all_tags | split: "," | size }} tags</span>
+      <span class="stat-sep">//</span>
+      <span class="stat">{{ site.posts.first.date | date: "%Y" }} &mdash; {{ site.posts.last.date | date: "%Y" }}</span>
+    </div>
+  </div>
+</section>
+
+<section class="bento-section">
+  <div class="bento-grid">
+    {% for post in site.posts %}
+    {% assign color_index = forloop.index0 | modulo: 3 %}
+    {% if color_index == 0 %}{% assign glow = "cyan" %}
+    {% elsif color_index == 1 %}{% assign glow = "magenta" %}
+    {% else %}{% assign glow = "purple" %}{% endif %}
+
+    {% if forloop.index == 1 %}{% assign size = "featured" %}
+    {% elsif forloop.index == 2 or forloop.index == 3 %}{% assign size = "large" %}
+    {% elsif forloop.index == 4 or forloop.index == 7 or forloop.index == 11 %}{% assign size = "tall" %}
+    {% else %}{% assign size = "regular" %}{% endif %}
+
+    <a href="{{ post.url | relative_url }}" class="bento-card {{ size }} glow-{{ glow }}">
+      <div class="card-inner">
+        <div class="card-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+          {% if post.tags.size > 0 %}
+          <span class="card-tag">{{ post.tags.first }}</span>
+          {% endif %}
+        </div>
+        <h2 class="card-title">{{ post.title }}</h2>
+        {% if size == "featured" or size == "large" or size == "tall" %}
+        <p class="card-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        {% endif %}
+        <span class="card-link">READ &rarr;</span>
+      </div>
+      <div class="card-glow"></div>
+    </a>
+    {% endfor %}
+  </div>
+</section>

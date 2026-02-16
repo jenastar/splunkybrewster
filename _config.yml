@@ -4,14 +4,14 @@ description: >-
 url: "https://splunkybrewster.com"
 baseurl: ""
 
-theme: minima
-
 permalink: /:year/:month/:title.html
 
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-redirect-from
+
+excerpt_separator: <!--more-->
 
 defaults:
   - scope:

@@ -1,0 +1,21 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a href="{{ '/' | relative_url }}" class="site-logo" aria-label="Home">
+      <span class="logo-icon">&gt;_</span>
+      <span class="logo-text">
+        <span class="logo-main">SPLUNKY</span>
+        <span class="logo-accent">BREWSTER</span>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>INDEX</a></li>
+        <li><a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %}>ABOUT</a></li>
+        <li><a href="{{ site.url }}/feed.xml" class="nav-rss" aria-label="RSS Feed">[RSS]</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
