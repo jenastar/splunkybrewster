@@ -17,6 +17,9 @@ Here is an embedded image:
 
 Here is a video reference:
 
-![video](/assets/media/rickRolled.mp4)
+<video controls playsinline style="width:100%; max-width:720px;">
+  <source src="/assets/media/rickRolled.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 If you see the image rendered and a placeholder for the video, media embedding works.
