@@ -1,16 +1,13 @@
 ---
 share: true
 layout: post
-title: RAG Architectures
-date: 2026-02-16T12:00:00-08:00
+title: RAG Architectures Field Guide
+date: 2026-02-16T16:34:43-08:00
+slug: 2026-02-16-rag-architectures-field-guide
 tags:
-  - rag
-  - ai
-  - architecture
-  - llm
+  - 
 permalink: /2026/02/rag-architectures-field-guide.html
 ---
-
 You've heard "just add RAG" thrown around like it's one thing. It's not. There are at least half a dozen distinct architectures, and picking the wrong one will cost you weeks.
 
 Here's what I've learned sorting through them.
