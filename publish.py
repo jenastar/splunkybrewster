@@ -283,6 +283,9 @@ def convert_note_to_post(note_path, upload_videos=True, youtube_playlist=DEFAULT
         body = body.replace(match.group(0), f"![{alt}](/assets/media/{dest_name})")
         logger.info(f"  Copied image: {dest_name}")
 
+    # Strip Templater artifacts: <% tp.file.cursor(N) %> etc.
+    body = re.sub(r"<%\s*tp\..*?%>\n?", "", body)
+
     # Process wikilinks: [[Note Name]] → plain text
     body = re.sub(r"\[\[([^\]|]+)\|([^\]]+)\]\]", r"\2", body)  # [[note|display]] → display
     body = re.sub(r"\[\[([^\]]+)\]\]", r"\1", body)  # [[note]] → note
