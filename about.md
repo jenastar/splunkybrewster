@@ -33,3 +33,7 @@ permalink: /about/
 **Splunky Brewster** started in 2014 as a reference for data engineering patterns I kept solving across environments. It grew into a technical blog covering the full stack from ingestion to insight.
 
 Topics include **big data architecture** (ETL pipelines, schema normalization, event correlation, distributed clustering), **cloud infrastructure** (GCP storage migrations, Kubernetes, capacity planning), and **ML engineering** (knowledge graph-augmented generation, NL-to-structured-query systems, detection automation — and yes, [that time Claude Rick Rolled me live on camera](/2025/06/i-got-rick-rolled-by-claude-and-heres_12.html)).
+
+## The Stack
+
+This blog runs on **Jekyll** + **GitHub Pages** with a custom cyberpunk theme. No JavaScript frameworks. No build pipeline. Just HTML, CSS, and Liquid templates pushed to `main`.
