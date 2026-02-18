@@ -16,7 +16,7 @@ permalink: /about/
 <p><span class="prompt">$</span> <span class="cmd">whoami</span></p>
 <p class="output">Jena Star — big data architect, security engineer, ML practitioner, hacker of things</p>
 <p><span class="prompt">$</span> <span class="cmd">cat /etc/mission</span></p>
-<p class="output">Real-world lessons from the trenches. No fluff. No theory without practice. Just what actually worked (and what spectacularly didn't).</p>
+<p class="output">Engineering notes on big data, ML systems, and security architecture at enterprise scale.</p>
 <p><span class="prompt">$</span> <span class="cmd">ls ~/expertise/</span></p>
 <p class="output">distributed-systems/&nbsp;&nbsp; etl-pipelines/&nbsp;&nbsp; data-normalization/&nbsp;&nbsp; event-correlation/&nbsp;&nbsp; site-reliability/&nbsp;&nbsp; cloud-infrastructure/&nbsp;&nbsp; ml-engineering/&nbsp;&nbsp; detection-automation/</p>
 <p><span class="prompt">$</span> <span class="cmd">cat ~/certs.yml</span></p>
@@ -30,9 +30,9 @@ permalink: /about/
 
 ## The Blog
 
-**Splunky Brewster** started in 2014 when I got tired of solving the same data engineering problems over and over. I started writing them down — for myself, for my team, and eventually for anyone else stuck at 2am wondering why their ETL pipeline is silently dropping events.
+**Splunky Brewster** started in 2014 as a reference for data engineering patterns I kept solving across environments. It grew into a technical blog covering the full stack from ingestion to insight.
 
-Topics range from **big data architecture** (ETL pipelines, schema normalization, event correlation, enterprise reliability) to **infrastructure war stories** (GCP disk shrinking nightmares, storage tier migrations) to **ML engineering** (knowledge graph-augmented generation, NL-to-structured-query systems, and yes — [that time Claude Rick Rolled me live on camera](/2025/06/i-got-rick-rolled-by-claude-and-heres_12.html)).
+Topics include **big data architecture** (ETL pipelines, schema normalization, event correlation, distributed clustering), **cloud infrastructure** (GCP storage migrations, Kubernetes, capacity planning), and **ML engineering** (knowledge graph-augmented generation, NL-to-structured-query systems, detection automation — and yes, [that time Claude Rick Rolled me live on camera](/2025/06/i-got-rick-rolled-by-claude-and-heres_12.html)).
 
 ## The Stack
 
