@@ -14,7 +14,7 @@ permalink: /about/
 </div>
 <div class="terminal-body">
 <p><span class="prompt">$</span> <span class="cmd">whoami</span></p>
-<p class="output">Jena Star — big data architect, security engineer, ML practitioner, hacker of things</p>
+<p class="output">Jena Peoples — big data architect, security engineer, ML practitioner, hacker of things</p>
 <p><span class="prompt">$</span> <span class="cmd">cat /etc/mission</span></p>
 <p class="output">Engineering notes on big data, ML systems, and security architecture at enterprise scale.</p>
 <p><span class="prompt">$</span> <span class="cmd">ls ~/expertise/</span></p>
@@ -22,7 +22,7 @@ permalink: /about/
 <p><span class="prompt">$</span> <span class="cmd">cat ~/certs.yml</span></p>
 <p class="output">CISSP&nbsp;&nbsp; Enterprise Certified Architect&nbsp;&nbsp; Enterprise Security Certified&nbsp;&nbsp; AWS Cloud&nbsp;&nbsp; GKE</p>
 <p><span class="prompt">$</span> <span class="cmd">cat ~/links.conf</span></p>
-<p class="output"><a href="https://github.com/jenastar">github://jenastar</a>&nbsp;&nbsp; <a href="https://www.credly.com/users/jena-peoples">credly://jena-peoples</a></p>
+<p class="output"><a href="https://github.com/jenastar">github://jenastar</a>&nbsp;&nbsp; <a href="https://www.linkedin.com/in/jenapeoples">linkedin://jenapeoples</a>&nbsp;&nbsp; <a href="https://www.credly.com/users/jena-peoples">credly://jena-peoples</a></p>
 <p class="cursor">_</p>
 </div>
 </div>
