@@ -27,8 +27,16 @@ jobs:
         run: |
           if [ -n "$SEO_STRING" ]; then
             mkdir -p _data
-            printf 'strings:\n  - |\n' > _data/seo.yml
-            printf '%s\n' "$SEO_STRING" | sed 's/^/    /' >> _data/seo.yml
+            python3 -c "
+          import json, os
+          s = os.environ['SEO_STRING']
+          with open('_data/seo.yml', 'w') as f:
+              f.write('strings:\n')
+              f.write('  - ' + json.dumps(s) + '\n')
+          "
+            echo "Wrote _data/seo.yml"
+            cat _data/seo.yml | head -c 40
+            echo "..."
           fi
 
       - name: Setup Pages
@@ -39,6 +47,9 @@ jobs:
         with:
           source: ./
           destination: ./_site
+
+      - name: Verify SEO in output
+        run: grep -c "aria-hidden" _site/index.html || echo "NOT FOUND in build output"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
