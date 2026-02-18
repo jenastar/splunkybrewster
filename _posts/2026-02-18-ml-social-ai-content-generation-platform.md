@@ -19,6 +19,8 @@ permalink: /2026/02/ml-social-ai-content-generation-platform.html
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/L7kCpLQ6KCc?list=PLf3piQ-M6S6TIuKHPkbp-_bmYoAu_62xY" frameborder="0" allowfullscreen></iframe>
 </div>
 
+Check out more videos on the [Need-to-Nerd YouTube channel](https://www.youtube.com/@Need-to-Nerd) and subscribe for updates on AI, security, and data engineering content.
+
 ML Social is an AI content generation platform I built that handles the full pipeline from concept to published content. It generates educational videos, podcast episodes, and social media posts, then distributes them to YouTube, Spotify, TikTok, and Instagram. The whole thing runs through a Streamlit UI or CLI, and the core idea is simple: automate the boring parts of content creation so you can focus on what matters.
 
 <!--more-->
