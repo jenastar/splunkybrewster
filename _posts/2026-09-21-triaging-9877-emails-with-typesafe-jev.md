@@ -9,6 +9,8 @@ tags:
 permalink: /2026/09/triaging-inbox-with-typesafe-jev.html
 ---
 
+My vote is cast: I'm bullish on Jev and System One models.
+
 Every bulk-classification job I have thrown at a chat model has the same shape: cost and latency scale linearly with volume, and you end up writing a parser for output that occasionally comes back malformed. TypeSafe's Jev model breaks that shape. I ran it against 9,877 unread emails across two inboxes, no cleanup beforehand, spam and phishing and real correspondence all mixed together, to see how far it would actually hold up.
 
 Jev is a System One model. Instead of generating text you then have to parse, it takes a `state` (the content to judge) and a map of typed `questions`, and returns one typed answer per question. Three question types: `noul` (a probability between 0 and 1), `choice` (a selection among options your own code enumerates), and `score` (a position on a defined scale). No free text, ever. If you need an open-ended value back, like a specific date, Jev is the wrong tool: it judges, your code extracts.
